@@ -35,7 +35,8 @@ def load_models():
     logistic_model = joblib.load("logistic_model.pkl")
 
     neural_network = tf.keras.models.load_model(
-        "neural_network.keras"
+    "neural_network.keras",
+    compile=False
     )
 
     scaler = joblib.load("scaler.pkl")
